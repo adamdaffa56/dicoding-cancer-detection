@@ -4,7 +4,7 @@ async function getHistories() {
     const db = new Firestore();
 
     return new Promise((resolve, reject) => {
-        db.collection('Predictions').get()
+        db.collection('predictions').get()
             .then(snapshot => {
                 const data = [];
                 snapshot.forEach(document => {
